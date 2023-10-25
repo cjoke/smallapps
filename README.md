@@ -9,7 +9,7 @@ To use :
   it will give back and store an url in your system memory.
   
   You can now paste the url (ctrl +v) in a browser and read your copied content at pastebin.com or,
-  you can share the url with anyone that want/need to read your content at pastebin.com. 
+  you can share the url with anyone that want/need to read your content at termbin.com. 
   Or both.
 
 
