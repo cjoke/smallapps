@@ -1,8 +1,12 @@
 Small programs that makes my day more fun. 
 
-##Permbin
+##  Permbin
+
 Before use, you will need paste and copy from pyperclip.
-To install :  pip install pyperclip
+
+Requirements
+    - pyperclip
+    
 To use : 
   just copy some text and execute this program.
   It will give no output. But, 
@@ -13,7 +17,13 @@ To use :
   Or both.
 
 
-##readtoaudio
+##  readtoaudio
+
+Requirement
+    - gTTS
+    - playsoud
+    - pandas 
+
 you will need to install gTTS, playsound and pandas
 you find them all at pypi.org
  Audiochat I use when reading from whatever source browser
