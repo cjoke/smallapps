@@ -3,6 +3,7 @@
 #Author         : https://github.com/cjoke
 #Releasedate    : 24.10.2023
 #License        : GPL3
+#License        : GPL2 (read the document! I havent, but I know its good!)
 
 from tempfile import NamedTemporaryFile
 import gtts.lang
@@ -22,7 +23,7 @@ class ChooseLang:
 
 class Speak:
     def __init__(self, text='my little text', lang='en'):
-        gTTS(text=text, lang=lang, tld='com.au', slow=False).write_to_fp(voice:= NamedTemporaryFile())
+        gTTS(text=text, lang=lang, tld='com.au', slow=False).write_to_fp(voice:=NamedTemporaryFile())
         playsound(voice.name)
         voice.close()
 
