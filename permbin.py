@@ -3,21 +3,17 @@
 # Author            : https://github.com/cjoke
 # Version           : 0.1-rc1
 # Releasedate       : 20.10.2023
-# License           : GPL2 (read the document! I havent, but I know its good!)
+# License           : GPL3 (Share)
+#
+#Before use you will need paste and copy from pyperclip
+#pip install pyperclip
+#just copy some text and execute this program.
+#It will give no output. But, it will give back and store an url in system memory.
+#you can then paste your url in a browser and read the content your self or,
+#share the url with anyone that wants to read your content. Or both.
 
 import subprocess
 from pyperclip import paste, copy
-
-'''
-Before use you will need paste and copy from pyperclip
-pip install pyperclip
-
-just copy some text and execute this program.
-It will give no output. But, it will give back and store an url in system memory.
-you can then paste your url in a browser and read the content your self or,
-share the url with anyone that wants to read your content. Or both.
-'''
-
 
 class ClipnPaste:
     """This one just grabs stuff and return it"""

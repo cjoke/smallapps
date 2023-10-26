@@ -1,19 +1,29 @@
 Small programs that makes my day more fun. 
 
-##Permbin
+##  Permbin
+
 Before use, you will need paste and copy from pyperclip.
-To install :  pip install pyperclip
+
+Requirements
+    - pyperclip
+    
 To use : 
   just copy some text and execute this program.
   It will give no output. But, 
   it will give back and store an url in your system memory.
   
   You can now paste the url (ctrl +v) in a browser and read your copied content at pastebin.com or,
-  you can share the url with anyone that want/need to read your content at pastebin.com. 
+  you can share the url with anyone that want/need to read your content at termbin.com. 
   Or both.
 
 
-##readtoaudio
+##  readtoaudio
+
+Requirement
+    - gTTS
+    - playsoud
+    - pandas 
+
 you will need to install gTTS, playsound and pandas
 you find them all at pypi.org
  Audiochat I use when reading from whatever source browser
