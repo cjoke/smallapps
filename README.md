@@ -1,4 +1,4 @@
-Small programs that makes my day more fun. 
+## Small programs that makes my day more fun. 
 
 This is a collection of small programs I have fun playing with daily.
 I have learned python programming language and howto maintain git and 
