@@ -15,7 +15,7 @@ e.g : pip install packagename
 ##  Permbin
 Before use, you will need paste and copy from pyperclip.
 
-Requirements
+Requirements : 
  pyperclip
     
 To use : 
@@ -30,7 +30,7 @@ To use :
 
 
 ##  readtoaudio
-Requirements
+Requirements : 
  gTTS
  playsoud
  pandas 
@@ -46,7 +46,7 @@ Requirements
 
 
 ## aichat
-Requirement
+Requirement : 
  openai
  speech_recognition
 
