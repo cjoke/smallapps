@@ -46,9 +46,9 @@ Requirements :
 
 
 ## aichat
-Requirement : 
- openai
- speech_recognition
+Requirements : 
+openai
+speech_recognition
 
  This is a chatbot I made the first time I spoke with openGPT through their webplatform. 
  I made it write examplecodes on how I could make a audiochat application to communicate 
@@ -56,6 +56,16 @@ Requirement :
  this aichatbot works but its messy and not redundant. so I guess I will do some cleaning
  when I have time for that. 
 
+## simple task manager
+Requirements : 
+sqlalchemy
 
-
+A simple task manager
+simple dialog
+0 = exit
+1 = list tasks
+2 = add task
+    2.1 = new dialog
+3 = remove task
+    3.1 = choose task to be removed from the list
 HAVE FUN SHARING! :) 

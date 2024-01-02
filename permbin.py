@@ -4,19 +4,25 @@
 # Version           : 0.1-rc1
 # Releasedate       : 20.10.2023
 # License           : GPL3 (Share)
-#
-#Before use you will need paste and copy from pyperclip
-#pip install pyperclip
-#just copy some text and execute this program.
-#It will give no output. But, it will give back and store an url in system memory.
-#you can then paste your url in a browser and read the content your self or,
-#share the url with anyone that wants to read your content. Or both.
+"""
+ Before use you will need paste and copy from pyperclip
+ pip install pyperclip
+ just copy some text and execute this program.
+ It will give no output. But, it will give back and store an url
+ in system memory.
+ you can then paste your url in a browser and read the content your self or,
+ share the url with anyone that wants to read your content. Or both.
+"""
 
 import subprocess
 from pyperclip import paste, copy
 
+
 class ClipnPaste:
-    """This one just grabs stuff and return it"""
+    """
+    This one just grabs stuff and return it
+    """
+
     def __init__(self):
         self.data = paste()
 
@@ -26,7 +32,10 @@ class ClipnPaste:
 
 
 class Main:
-    """Grabs stuff from ClipnPaste, uploads and returns an url in system memory"""
+    """
+    Grabs stuff from ClipnPaste, uploads and returns an url in system memory
+    """
+
     def __init__(self):
         data = ClipnPaste()
         data = str(data)

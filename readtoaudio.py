@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-#Name           : readtoaudio
-#Author         : https://github.com/cjoke
-#Releasedate    : 24.10.2023
-#License        : GPL3
-#License        : GPL2 (read the document! I havent, but I know its good!)
+# Name           : readtoaudio
+# Author         : https://github.com/cjoke
+# Releasedate    : 24.10.2023
+# License        : GPL3
+# License        : GPL2 (read the document! I havent, but I know its good!)
 
 from tempfile import NamedTemporaryFile
 import gtts.lang
@@ -11,22 +11,28 @@ from gtts import gTTS
 from playsound import playsound
 from pandas.io.clipboard import clipboard_get
 
+
 class ChooseLang:
-    '''TODO implenent dialog with user and establish language'''
+    """TODO implenent dialog with user and establish language"""
+
     def __init__(self):
         languages = gtts.lang.tts_langs()
         print(languages)
 
     def user_dialog(self):
-        choice = input('What language do you prefer? : ')
+        choice = input("What language do you prefer? : ")
         return choice
 
+
 class Speak:
-    def __init__(self, text='my little text', lang='en'):
-        gTTS(text=text, lang=lang, tld='com.au', slow=False).write_to_fp(voice:=NamedTemporaryFile())
+    def __init__(self, text="my little text", lang="en"):
+        gTTS(text=text, lang=lang, tld="com.au", slow=False).write_to_fp(
+            voice := NamedTemporaryFile()
+        )
         playsound(voice.name)
         voice.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     cb = clipboard_get()
-    Speak(f'{cb}')
+    Speak(f"{cb}")
