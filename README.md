@@ -1,4 +1,5 @@
-## Small programs that makes my day more fun. 
+# Small programs 
+(that makes my day more fun) 
 
 This is a collection of small programs I have fun playing with daily.
 I have learned python programming language and howto maintain git and 
@@ -9,31 +10,31 @@ have discovered on the github platform.
 
 
 
-To install requirements I use pip 
-e.g : pip install packagename
+## To install requirements I use pip 
+e.g : ``` pip install <packagename> ```
+
+
 
 ##  Permbin
 Before use, you will need paste and copy from pyperclip.
 
-Requirements : 
- pyperclip
+### Requirements :
+
+ ``` pip install pyperclip ```
     
 To use : 
   just copy some text and execute this program.
   It will give no output. But, 
-  it will give back and store an url in your system memory.
-  
-  You can now paste the url (ctrl +v) in a browser and read your copied content at pastebin.com or,
-  you can share the url with anyone that want/need to read your content at termbin.com. 
-  Or both.
-
+  it will store an url in system memory (e.g ctrl+c) and 
+  upload the content to termbin.com where you now can
+  paste the url (ctrl +v) in a browser and 
+  read your content at termbin.com.
 
 
 ##  readtoaudio
-Requirements : 
- gTTS
- playsoud
- pandas 
+### Requirements :
+
+``` pip install gTTS playsoud  pandas ``` 
 
  This is similar to firefox text to speech but with alot better 
  quality. readtoaudio is also application independed. With that said
@@ -46,9 +47,9 @@ Requirements :
 
 
 ## aichat
-Requirements : 
-openai
-speech_recognition
+### Requirements : 
+
+``` pip install openai speech_recognition ```
 
  This is a chatbot I made the first time I spoke with openGPT through their webplatform. 
  I made it write examplecodes on how I could make a audiochat application to communicate 
@@ -56,16 +57,18 @@ speech_recognition
  this aichatbot works but its messy and not redundant. so I guess I will do some cleaning
  when I have time for that. 
 
+
 ## simple task manager
 Requirements : 
-sqlalchemy
 
-A simple task manager
+``` pip install sqlalchemy ```
+
+A simple but dynamic task manager
 simple dialog
 0 = exit
 1 = list tasks
 2 = add task
-    2.1 = new dialog
+    2.1 = new dialog for adding tasks
 3 = remove task
     3.1 = choose task to be removed from the list
 HAVE FUN SHARING! :) 
