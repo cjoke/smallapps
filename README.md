@@ -1,9 +1,14 @@
 # Small programs 
 (that makes my day more fun) 
+*Feel free to download this repo and play with the code. 
 
 This is a collection of small programs I have fun playing with daily.
 I have learned python programming language and howto maintain git and 
 loads of other stuff along the way. 
+
+This repo is for learning purpose only and there is not other goal
+than learning new stuff and if Im lucky some of the programs will 
+be usefull. fyi this is my intention.
 
 For IDE I have played around with nvim and different configurations I 
 have discovered on the github platform.
