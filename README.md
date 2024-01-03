@@ -30,10 +30,10 @@ Before use, you will need paste and copy from pyperclip.
 To use : 
   just copy some text and execute this program.
   It will give no output. But, 
-  it will store an url in system memory (e.g ctrl+c) and 
-  upload the content to termbin.com where you now can
+  it will upload the copied content to termbin.com where you now can
   paste the url (ctrl +v) in a browser and 
-  read your content at termbin.com.
+  read your content at termbin.com, it is a nice way to share e.g errormessages
+  on irc where users tent to be hateful against "spammers". this makes it easy sharing content.
 
 
 ##  readtoaudio
