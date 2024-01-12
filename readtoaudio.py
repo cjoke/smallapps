@@ -12,8 +12,10 @@ from playsound import playsound
 from pandas.io.clipboard import clipboard_get
 from google.cloud import translate_v2 as translate
 
+# Set your Google Cloud credentials
 credentials = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
 
+# Class to get the available languages
 class InfoLang:
     def __init__(self):
         self.lang = gtts.lang.tts_langs()
@@ -25,6 +27,7 @@ class InfoLang:
             print(i, j)
         return self.lang
 
+# Class to get the user's input for language
 class UserInput:
     def __init__(self, default="en"):
         self.default = default
@@ -38,30 +41,33 @@ class UserInput:
             print("Invalid language. Defaulting to English.")
             return self.default
 
+# Class to translate the text
 class Translate:
-    def __init__(self):
-        self.text = clipboard_get()
-        self.translate_client = translate.Client()
-        self.target = UserInput()()
-        self.translation = self.translate_client.translate(
-            self.text, target_language=self.target
+    def __init__(self, target):
+        text = clipboard_get()
+        translate_client = translate.Client()
+        self.translation = translate_client.translate(
+            text, target_language=target
         )
     def __call__(self):
-        return self.translation
+        return self.translation["translatedText"]
 
+# Class to speak the translated text
 class Speak:
-    def __init__(self, text="my little text", lang=UserInput()()):
+    def __init__(self, text="my little text", lang="en"):
         gTTS(text=text, lang=lang, tld="com.au", slow=False).write_to_fp(
             voice := NamedTemporaryFile()
         )
         playsound(voice.name)
         voice.close()
 
-
+# Main function
 if __name__ == "__main__":
+    target = UserInput()()  
     cb = clipboard_get()
-    translation = Translate()()
+    translation = Translate(target)()
     if cb:
-        Speak(f"{translation}")
+        print(translation)
+        Speak(translation, target)
     else:
-        Speak("hey my little angel")
+        Speak("No text in clipboard.")
