@@ -3,3 +3,5 @@ __pycache__
 api_key.txt
 conversation_log.txt
 freeze-smallapps-v3.12.0.txt
+task.db
+timemanagement.db
