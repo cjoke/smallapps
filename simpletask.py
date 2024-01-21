@@ -17,10 +17,12 @@ session = Session()
 # create base class
 Base = declarative_base()
 
+
 class Task(Base):
     """
     This class represents the Task table in the database.
     """
+
     __tablename__ = "task"
     id = Column(Integer, primary_key=True)
     subject = Column(String, max_length=50)
@@ -30,13 +32,16 @@ class Task(Base):
     def __repr__(self):
         return "<Task(task='%s', priority='%s')>" % (self.task, self.priority)
 
+
 # create table
 Base.metadata.create_all(engine)
+
 
 class AddTask:
     """
     This class is responsible for adding tasks to the database.
     """
+
     def __init__(self):
         self.user_input_subject = input("Enter subject: ")
         self.user_input_task = input("Enter task: ")
@@ -63,10 +68,12 @@ class AddTask:
             self.user_input_priority,
         )
 
+
 class ShowAllTasks:
     """
     This class is responsible for showing all tasks in the database.
     """
+
     def __init__(self):
         self.tasks = session.query(Task).all()
         for task in self.tasks:
@@ -77,10 +84,12 @@ class ShowAllTasks:
     def __repr__(self):
         return "<UserQuery(subject='%s', task='%s', priority='%s')>" % (self.tasks)
 
+
 class DeleteTask:
     """
     This class is responsible for deleting tasks from the database.
     """
+
     def __init__(self):
         self.task_id = input("Enter task id to delete: ")
         if self.task_id == "":
@@ -94,18 +103,22 @@ class DeleteTask:
     def __repr__(self):
         return "<UserDelete(task_id='%s', task='%s')>" % (self.task_id, self.task)
 
+
 @dataclass
 class Command:
     """
     This class represents a command that the user can execute.
     """
+
     name: str
     action: Callable[[], None]
+
 
 class UserInput:
     """
     This class is responsible for processing user input.
     """
+
     def __init__(self):
         self.commands = self.initialize_commands()
 
@@ -134,6 +147,7 @@ class UserInput:
 
     def __repr__(self):
         return "<UserInput(user_input='%s')>" % (self.user_input)
+
 
 if __name__ == "__main__":
     user_input = UserInput()
