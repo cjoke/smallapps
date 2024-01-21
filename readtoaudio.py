@@ -15,17 +15,19 @@ from google.cloud import translate_v2 as translate
 # Set your Google Cloud credentials
 credentials = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
 
+
 # Class to get the available languages
 class InfoLang:
     def __init__(self):
-        self.lang = gtts.lang.tts_langs()
-        self.lang = sorted(self.lang.items(), key=lambda x: x[1])
-        self.lang = dict(self.lang)
+        self.language_codes = gtts.lang.tts_langs()
+        self.sorted_languages = sorted(self.language_codes.items(), key=lambda x: x[1])
+        self.sorted_languages = dict(self.sorted_languages)
 
     def __call__(self):
-        for i, j in self.lang.items():
-            print(i, j)
-        return self.lang
+        for code, language in self.sorted_languages.items():
+            print(code, language)
+        return self.sorted_languages
+
 
 # Class to get the user's input for language
 class UserInput:
@@ -41,16 +43,17 @@ class UserInput:
             print("Invalid language. Defaulting to English.")
             return self.default
 
+
 # Class to translate the text
 class Translate:
     def __init__(self, target):
         text = clipboard_get()
         translate_client = translate.Client()
-        self.translation = translate_client.translate(
-            text, target_language=target
-        )
+        self.translation = translate_client.translate(text, target_language=target)
+
     def __call__(self):
         return self.translation["translatedText"]
+
 
 # Class to speak the translated text
 class Speak:
@@ -61,9 +64,10 @@ class Speak:
         playsound(voice.name)
         voice.close()
 
+
 # Main function
 if __name__ == "__main__":
-    target = UserInput()()  
+    target = UserInput()()
     cb = clipboard_get()
     translation = Translate(target)()
     if cb:
