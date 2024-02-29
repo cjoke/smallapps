@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
-# Name           : readtoaudio
-# Author         : https://github.com/cjoke
+# -*- coding: utf-8 -*-
+
+# Name           : texttoaudio
+# Author         : cjoke
+# url            :https://github.com/cjoke
 # Releasedate    : 24.10.2023
 # License        : GPL3
-# License        : GPL2 (read the document! I havent, but I know its good!)
+
+"""
+This is a simple script to read the text from the clipboard and convert it to audio.
+It uses the Google Cloud Translate API to translate the text to the desired language.
+you can translate from any language to any language.
+"""
+
 import os
 from tempfile import NamedTemporaryFile
+
 import gtts.lang
-from gtts import gTTS
-from playsound import playsound
-from pandas.io.clipboard import clipboard_get
 from google.cloud import translate_v2 as translate
+from gtts import gTTS
+from pandas.io.clipboard import clipboard_get
+from playsound import playsound
 
 # Set your Google Cloud credentials
 credentials = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
@@ -68,9 +78,8 @@ class Speak:
 # Main function
 if __name__ == "__main__":
     target = UserInput()()
-    cb = clipboard_get()
     translation = Translate(target)()
-    if cb:
+    if clipboard_get() != "":
         print(translation)
         Speak(translation, target)
     else:
