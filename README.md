@@ -1,15 +1,18 @@
-# Small Programs for Daily Fun
+# Small and simple programs
 
-This repository contains a collection of small programs that I enjoy using on a daily basis. I've learned Python programming, Git maintenance, and much more along the way. Feel free to download this repo and play with the code.
+This repository contains a collection of small programs that I enjoy fiddling with on a daily basis. 
+I've learned Python programming, Git maintenance, and much more along the way. 
+Feel free to download this repo and play with the code.
 
 ## Table of Contents
 1. [Permbin](#permbin)
-2. [Readtoaudio](#readtoaudio)
+2. [Texttoaudio](#texttoaudio)
 3. [Aichat](#aichat)
 4. [Simple Task Manager](#simple-task-manager)
 5. [audiocruncher](#audiocruncher)
 6. [crawldir](#crawldir)
 7. [Timemanagement](#timemanagement)
+8. [Audiograph](#audiograph)
 
 ## Permbin
 Permbin is a program that allows you to upload copied content to termbin.com. It's a great way to share error messages on IRC without being accused of spamming.
@@ -20,8 +23,8 @@ Permbin is a program that allows you to upload copied content to termbin.com. It
 ### Usage
 Copy some text and execute this program. It will upload the copied content to termbin.com. You can then paste the URL in a browser to view your content.
 
-## Readtoaudio
-Readtoaudio is a text-to-speech program with high-quality audio. It's application-independent, so you can copy text from anywhere and have it read back to you.
+## Texttoaudio
+texttoaudio is a text-to-speech program with high-quality audio. It's application-independent, so you can copy text from anywhere and have it read back to you.
 
 ### Requirements
 - `gTTS`
@@ -75,4 +78,11 @@ print("4. View events")
 print("5. Exit")
 choice = input("Enter choice: ")
 
+## Audiograph
+Audiograph is a program that generates a graph from an audio file in real time.
 
+### Requirements
+- `numpy`
+- `matplotlib`
+- `pyaudio`
+- `struct`
