@@ -70,8 +70,9 @@ while True:
         fig.canvas.flush_events()
         frame_count += 1
         
-    except TclError:
-        
+    except RuntimeError as e:
+        print(e) # Runtime error handling
+
         # Calculate average frame rate
         frame_rate = frame_count / (time.time() - start_time)
         
